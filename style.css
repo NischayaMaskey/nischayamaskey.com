@@ -39,7 +39,7 @@ button {
 }
 
 .cell.revealed {
-    background-color: #dcdcdc;
+    background-color: #b8bfbd;
     cursor: default;
 }
 
@@ -49,4 +49,36 @@ button {
 
 .cell.flagged {
     background-color: yellow;
+}
+
+#i1 {
+    color: rgb(34, 48, 247);
+}
+
+#i2 {
+    color: rgba(27, 116, 17, 255);
+}
+
+#i3 {
+    color: rgba(175, 32, 32, 255);
+}
+
+#i4 {
+    color: rgba(5, 7, 95, 255);
+}
+
+#i5 {
+    color: rgba(102, 5, 4, 255);
+}
+
+#i6 {
+    color: rgba(43, 105, 104, 255);
+}
+
+#i7 {
+    color: rgb(0, 0, 2);
+}
+
+#i8 {
+    color: rgba(101, 14, 103, 255);
 }

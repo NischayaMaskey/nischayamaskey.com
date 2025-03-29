@@ -124,6 +124,11 @@ function renderBoard() {
                     cellElement.innerText = '💣';
                 } else if (cell.neighborMines > 0) {
                     cellElement.innerText = cell.neighborMines;
+                    cellElement.id = ("i" + cellElement.innerText);
+
+
+
+
                 }
             }
 
