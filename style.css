@@ -56,23 +56,23 @@ button {
 }
 
 #i2 {
-    color: rgba(27, 116, 17, 255);
+    color: rgb(27, 116, 17);
 }
 
 #i3 {
-    color: rgba(175, 32, 32, 255);
+    color: rgba(175, 32, 32);
 }
 
 #i4 {
-    color: rgba(5, 7, 95, 255);
+    color: rgba(5, 7, 95);
 }
 
 #i5 {
-    color: rgba(102, 5, 4, 255);
+    color: rgba(102, 5, 4);
 }
 
 #i6 {
-    color: rgba(43, 105, 104, 255);
+    color: rgba(43, 105, 104);
 }
 
 #i7 {
@@ -80,5 +80,5 @@ button {
 }
 
 #i8 {
-    color: rgba(101, 14, 103, 255);
+    color: rgba(101, 14, 103);
 }
