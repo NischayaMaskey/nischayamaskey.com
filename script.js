@@ -1,5 +1,7 @@
 const boardSize = 8;
 const mineCount = 10;
+const bsound1 = new Audio('/tileon.wav')
+const bsound2 = new Audio('explosion.ogg')
 let board = [];
 let revealedCells = 0;
 let isGameOver = false;
@@ -41,6 +43,7 @@ function generateMines() {
             mines.push(mine);
         }
     }
+    // mines.push(1);
     return mines;
 }
 
@@ -69,12 +72,21 @@ function countNeighborMines(row, col) {
 }
 
 function revealCell(row, col) {
+    if (revealedCells == 0) {
+        if (board[row][col].isMine) {
+            bsound1.play();
+            alert('You gatr');
+            generateBoard();
+        }
+        renderBoard();
+    }
     if (isGameOver || board[row][col].revealed || board[row][col].flagged) return;
     board[row][col].revealed = true;
     revealedCells++;
     if (board[row][col].isMine) {
         isGameOver = true;
 
+        alert('lost');
         renderBoard();
         return;
     }
@@ -117,6 +129,9 @@ function renderBoard() {
             const cell = board[i][j];
             const cellElement = document.createElement('div');
             cellElement.classList.add('cell');
+            if (isGameOver == true) {
+                cellElement.classList.addre
+            }
             if (cell.revealed) {
                 cellElement.classList.add('revealed');
                 if (cell.isMine) {
@@ -157,7 +172,11 @@ function resetGame() {
 }
 
 // Set up event listeners
-document.getElementById('reset').addEventListener('click', resetGame);
+document.getElementById('reset').addEventListener('click', () => {
+    bsound1.play();
+    alert('Want to Restart ?');
+    resetGame();
+});
 
 // Start the game
 generateBoard();
