@@ -75,7 +75,6 @@ function revealCell(row, col) {
     if (revealedCells == 0) {
         if (board[row][col].isMine) {
             bsound1.play();
-            alert('You gatr');
             generateBoard();
         }
         renderBoard();
