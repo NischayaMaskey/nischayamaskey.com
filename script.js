@@ -74,7 +74,7 @@ function countNeighborMines(row, col) {
 function revealCell(row, col) {
     if (revealedCells == 0) {
         if (board[row][col].isMine) {
-            bsound1.play();
+            bsound1.play();  
             generateBoard();
         }
         renderBoard();
@@ -173,7 +173,7 @@ function resetGame() {
 // Set up event listeners
 document.getElementById('reset').addEventListener('click', () => {
     bsound1.play();
-    alert('Want to Restart ?');
+    
     resetGame();
 });
 
