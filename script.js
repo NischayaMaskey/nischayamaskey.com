@@ -136,6 +136,7 @@ function renderBoard() {
                 if (cell.isMine) {
                     cellElement.classList.add('mine');
                     cellElement.innerText = '💣';
+                    bsound2.play();
                 } else if (cell.neighborMines > 0) {
                     cellElement.innerText = cell.neighborMines;
                     cellElement.id = ("i" + cellElement.innerText);
